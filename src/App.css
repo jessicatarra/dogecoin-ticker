@@ -8,6 +8,22 @@
   align-items: center;
 }
 
+.wrapper {
+  padding: 0 var(--wrapperSpace);
+  max-width: calc(1115px + 1.5em);
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  justify-self: center;
+}
+.logo {
+  margin: auto;
+}
+
 .title {
   margin-top: 1.5rem;
   font-size: 3.5rem;
@@ -45,4 +61,22 @@
 .price {
   color: #222831;
   font-size: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .App {
+    padding: 3rem 0;
+  }
+  .prices-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .prices-container {
+    grid-template-columns: repeat(1, 100%);
+    gap: 1rem;
+  }
 }

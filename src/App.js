@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import PriceCard from "./components/PriceCard";
+import Toggle from "./components/Toggle";
 import logo from "./logo.png";
 import "./App.css";
 
@@ -26,25 +27,30 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <img
-          className="logo"
-          src={logo}
-          width={150}
-          height={150}
-          alt="Dogecoin Logo"
-        />
-        <h1 className="title">Live Dogecoin Price</h1>
-        <h5 className="subtitle">Dogecoin To The Moon 🚀🌕</h5>
-        <div className="prices-container">
-          <PriceCard type="current" price={ticker.last} />
-          <PriceCard type="low" price={ticker.low} />
-          <PriceCard type="high" price={ticker.high} />
-          <PriceCard type="volume" price={ticker.vol} />
+        <div className="container-toggle">
+          <Toggle />
         </div>
-        <p>
-          Dogecoin price updated every 10 seconds from{" "}
-          <a href="https://wazirx.com/">WazirX api</a>
-        </p>
+        <div className="container">
+          <img
+            className="logo"
+            src={logo}
+            width={150}
+            height={150}
+            alt="Dogecoin Logo"
+          />
+          <h1 className="title">Live Dogecoin Price</h1>
+          <h5 className="subtitle">Dogecoin To The Moon 🚀🌕</h5>
+          <div className="prices-container">
+            <PriceCard type="current" price={ticker.last} />
+            <PriceCard type="low" price={ticker.low} />
+            <PriceCard type="high" price={ticker.high} />
+            <PriceCard type="volume" price={ticker.vol} />
+          </div>
+          <p className="update-info">
+            Dogecoin price updated every 10 seconds from{" "}
+            <a href="https://wazirx.com/">WazirX api</a>
+          </p>
+        </div>
       </div>
     </div>
   );

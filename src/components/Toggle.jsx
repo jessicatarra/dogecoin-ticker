@@ -5,14 +5,7 @@ import { useEffect, useState } from "react";
 
 const DARK_CLASS = "dark";
 const DarkToggle = () => {
-    const systemPrefersDark = useMediaQuery(
-        { query: "(prefers-color-scheme: dark)" },
-        undefined,
-        (prefersDark) => {
-            setIsDark(prefersDark);
-        }
-    );
-    const [isDark, setIsDark] = useState(systemPrefersDark);
+    const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
         if (isDark) {

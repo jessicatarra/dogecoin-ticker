@@ -10,7 +10,7 @@ function App() {
     low: 0,
     high: 0,
     last: 0,
-    volume: 0,
+    vol: 0,
   });
 
   useEffect(() => {

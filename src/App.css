@@ -63,20 +63,25 @@
   font-size: 3rem;
 }
 
+@media screen and (max-width: 1440px) {
+  .prices-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    gap: 1rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .App {
     padding: 3rem 0;
   }
   .prices-container {
-    display: grid;
     grid-template-columns: repeat(2, 50%);
-    gap: 1rem;
   }
 }
 
 @media screen and (max-width: 798px) {
   .prices-container {
     grid-template-columns: repeat(1, 100%);
-    gap: 1rem;
   }
 }

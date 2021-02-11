@@ -9,6 +9,7 @@ function App() {
     low: 0,
     high: 0,
     last: 0,
+    volume: 0,
   });
 
   useEffect(() => {
@@ -35,9 +36,10 @@ function App() {
         <h1 className="title">Live Dogecoin Price</h1>
         <h5 className="subtitle">Dogecoin To The Moon 🚀🌕</h5>
         <div className="prices-container">
+          <PriceCard type="current" price={ticker.last} />
           <PriceCard type="low" price={ticker.low} />
           <PriceCard type="high" price={ticker.high} />
-          <PriceCard type="current" price={ticker.last} />
+          <PriceCard type="volume" price={ticker.vol} />
         </div>
         <p>
           Dogecoin price updated every 10 seconds from{" "}

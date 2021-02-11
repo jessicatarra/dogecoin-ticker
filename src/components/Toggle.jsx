@@ -1,6 +1,5 @@
 import Toggle from "react-toggle";
 import "react-toggle/style.css";
-import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 
 const DARK_CLASS = "dark";
